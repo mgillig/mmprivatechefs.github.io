@@ -22,14 +22,14 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1" >
                         <li class="nav-item">
-                            <a class="nav-link text-light selected" name="Home" id="Home" href="./index.html">Home</a>
+                            <a class="nav-link text-light" name="Home" id="Home" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" name="AboutUs" id="AboutUs" href="./AboutUs.html">About Us</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link text-light" name="Menus" id="Menus" href="./Menus.html">Menus</a>
-                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link text-light selected" name="Menus" id="Menus" href="./Menus.html">Menus</a>
+                        </li>
                     </ul>
                 </div>
                 <a class="btn btn-primary" href='ma&#105;&#108;to&#58;%6&#68;m&#37;70r&#37;69%76a&#116;e&#99;h&#101;%662&#37;33&#64;g&#109;ail%2&#69;&#99;o%6D'><i b-pwey2cugl2 class="bi bi-envelope"></i> Contact Us</a>
@@ -37,52 +37,41 @@
         </nav>
     </header>
     <main role="main" class="pb-3">
-        <div class="container">
-            <style>
-                body {
-                    background-image: url('images/backgroundImages/Home_Stock.jpeg');
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-attachment: fixed;
-                }
-            </style>
-            <div class="row">
-                    <div class="col-md-12" id="03d21f11-1209-4395-9a84-b0182c283500">
-                        <div class="card panel-bg border-0">
-                            <div class="card-body">
-                                    <h1>Home</h1>
-                                    <p>Some Content</p>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <br/>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card panel-bg border-0">
-                        <div class="card-body">
-                            <h1><a href="./AboutUs.cshtml">About Us</a></h1>
-                            <p>Learn about the team</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card panel-bg border-0">
-                        <div class="card-body">
-                            <h1><a href="./Menus.cshtml">Menus</a></h1>
-                            <p>View some of sample dishes</p>
-                        </div>
+        <style>
+            body {
+                background-image: url('images/backgroundImages/Home_Stock.jpeg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+        </style>
+        <div class="container-fluid">
+            <div class="card card-body panel-bg" style="text-align: left; padding: 5px;">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <button type="button" id="appsCategory" class="category-btn btn" onclick="selectCategory('apps')">Appetizers</button>
+                        <button type="button" id="soupsCategory" class="category-btn btn" onclick="selectCategory('soups')">Soups</button>
+                        <button type="button" id="entreesCategory" class="category-btn btn" onclick="selectCategory('entrees')">Entrees</button>
+                        <button type="button" id="desertsCategory" class="category-btn btn" onclick="selectCategory('deserts')">Deserts</button>
                     </div>
                 </div>
             </div>
+            <div id="grid"></div>
         </div>
     </main>
-
     <footer class="border-top footer panel-bg" style="position: fixed; bottom: 0; width: 100%;">
         <div class="fluid-container" style="text-align: left;">
             &copy; 2024 - mmprivatechefs.com
         </div>
     </footer>
+    
+    <script script type="text/javascript">
+        var apps = [];
+        var soups = [];
+        var entrees = [];
+        var deserts = [];
+    </script>
+
     <script src="./lib/jquery/dist/jquery.min.js"></script>
     <script src="./lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/Obfuscator.js"></script>
