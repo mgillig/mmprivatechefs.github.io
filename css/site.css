@@ -51,3 +51,10 @@ body {
 .invalid {
     border-color: red;
 }
+
+.panel-link {
+    background-color: rgba(7, 42, 95, 0.75);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
