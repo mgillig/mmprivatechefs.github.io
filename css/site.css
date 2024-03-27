@@ -1,0 +1,53 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.panel-bg {
+    background-color: rgb(33 37 41 / 75%);
+    color: white;
+    text-align: center;
+}
+
+.selected {
+    /*text-decoration-line: underline;*/
+    font-weight: bold;
+}
+
+.panel-input {
+    background-color: rgb(33 37 41 / 50%);
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+.title-input {
+    font-size: 2.5rem;
+}
+
+.bg-danger > div.card-body {
+    background-color: #f1aeb5;
+    color: black;
+}
+
+.panel-text {
+    color: white;
+}
+
+.invalid {
+    border-color: red;
+}
