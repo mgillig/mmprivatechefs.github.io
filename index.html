@@ -17,6 +17,12 @@
             background-size: cover;
             background-attachment: fixed;
         }
+        .carousel-image {
+            max-height: 400px; 
+            object-fit: cover; 
+            padding-right: 10%; 
+            padding-left: 10%;
+        }
     </style>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light panel-bg border-bottom box-shadow mb-3">
@@ -54,7 +60,21 @@
                         <div class="card panel-bg border-0">
                             <div class="card-body">
                                     <h1>M&M Private Chefs</h1>
-                                    <!-- <p>Some Content</p> -->
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner" data-bind="foreach: carouselImages">
+                                            <div class="carousel-item" data-bind="attr:{id: $index}" >
+                                                <img data-bind="attr:{src: $data}" class="d-block w-100 carousel-image" alt="..." >
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
                             </div>
                         </div>
                     </div>
@@ -95,4 +115,15 @@
     <script src="./js/Obfuscator.js"></script>
     <script src="./js/site.js?v=ELfyBNQmlMdJXi6KUsuYFj9pTmzao-4ltz1Isxzd8w0"></script>
     <script type='text/javascript' src='./js/knockout-3.5.1.js'></script>
+    <script script type="text/javascript">
+        var pageModel = {
+            carouselImages: ko.observableArray([
+                "images/backgroundImages/AboutUs_Stock.jpeg",
+                "images/backgroundImages/Menus_Stock.jpeg",
+                "images/backgroundImages/AdobeStock1.jpeg",
+            ])
+        };
+        ko.applyBindings(pageModel);
+        $("#0").addClass("active");
+    </script>
 </html>
